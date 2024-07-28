@@ -8,14 +8,15 @@ body {
 
 .grid-container {	/*Main Grid Style*/
 	display: grid;
-	gap: 10px 10px;
-	grid-template-columns: 3fr 17fr;
-	grid-template-rows: 1fr 8fr 1fr;
+	/*gap: 10px 10px;*/
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: auto auto auto;/*auto minmax(auto, 3fr) auto;
+	/*grid-template-rows: 1fr 8fr 2fr;
 	/*grid-template-rows: 10vh 70vh 10vh;*/
 	grid-template-areas:
 	"h h h"
-	"s m m"
-	"b b b";
+	"m m s"
+	"b b fc";
 	
 }
 
@@ -29,8 +30,8 @@ body {
 	.grid-container {
 		grid-template-areas: 	
 		"h h h"
-		"s m m"
-		"b b b";
+		"m m s"
+		"b b fc";
 	}
 
 	li{
@@ -46,8 +47,17 @@ body {
 		"h h h"
 		"m m m"
 		"s s s"
+		"fc fc fc"
 		"b b b";
 	}
+
+	/*.grid-container {
+		grid-template-areas: 	
+		"h h h"
+		"s s s"
+		"m m m"
+		"b b b";
+	}*/
 
 	li {
 		display: inline-block;
@@ -61,16 +71,24 @@ body {
 	
 }
 
-.side-bar {
+/*.side-bar {
+	grid-area: s;
+	background-color: orange;
+	text-align: center;
+}*/
+
+.side-text {
 	grid-area: s;
 	background-color: orange;
 	text-align: center;
 }
+
 .main-body {
 	grid-area: m;
 	background-color: blueviolet;
 	background: url("Demo-Images/sunrise-columbia.jpg") no-repeat;
 	background-size: cover;
+	background-position: center;
 }
 .footer {
 	grid-area: b;
@@ -78,7 +96,7 @@ body {
 	text-align: center;
 }
 
-body, .grid-container {
+body, .grid-container, .flex-container {
 	margin: 0;
 }
 
@@ -92,11 +110,15 @@ ul {
 }
 
 .flex-container {
+	grid-area: fc;
 	display: flex;
 	justify-content: space-around;
+	padding-top: 10px;
+	background-color: aqua;
+
 
 }
 
 body {
-	background-color: black;
+	background-color: aqua;
 }
