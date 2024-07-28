@@ -74,6 +74,7 @@ body {
 	grid-area: h;
 	background-color: blue;
 	text-align:left;
+	border-bottom: 1px solid rgb(0, 0, 0);
 	
 }
 
@@ -87,6 +88,7 @@ body {
 	grid-area: s;
 	background-color: orange;
 	text-align: center;
+	border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 .main-body {
@@ -95,6 +97,7 @@ body {
 	background: url("Demo-Images/sunrise-columbia.jpg") no-repeat;
 	background-size: cover;
 	background-position: center;
+	border-bottom: 1px solid rgb(0, 0, 0);
 }
 .footer {
 	grid-area: b;
@@ -121,8 +124,6 @@ ul {
 	justify-content: space-around;
 	padding-top: 10px;
 	background-color: aqua;
-
-
 }
 
 body {
